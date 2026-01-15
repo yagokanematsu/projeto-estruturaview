@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulador de Fila Circular</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Fila Circular</h1>
+
+    <div class="controles">
+      <input type="number" id="valor" placeholder="Digite um valor">
+      <button class="inserir" onclick="inserir()">Inserir</button>
+      <button class="remover" onclick="remover()">Remover</button>
+      <button class="limpar" onclick="limpar()">Reiniciar</button>
+    </div>
+
+    <div id="mensagem"></div>
+
+    <div class="fila" id="fila"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
