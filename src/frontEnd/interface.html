@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de fila Circular</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../backEnd/script.js"></script>
+
+</head>
+<body>
+    <header>
+
+  <div class="container">
+            <div class="titulo">
+    <h1>Fila Circular</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="inicio">
+                <h1>Tamanho da Fila: </h1>
+                <input type="number" id="valor" placeholder="valor">
+                <button class="criar" onclick="iniciar_fila()">Criar</button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="principal">
+
+        <div class="layout">
+            <div class="tabela-esquerda">
+                <div class="controle-inserir">
+                    <h3>Inserir Conteúdo:</h3>
+                    <input type="number" id="inserir_valor" placeholder="Digite um valor">
+      <button class="inserir" onclick="inserir()">Inserir</button>
+                </div>
+                <div class="controle-mostrar">
+                    <h3>Mostrar Conteúdo:</h3>
+                    <select name="escolha" id="escolha">
+                        <option value="inicio">inicio</option>
+                        <option value="fim">fim</option>
+                    </select>
+                    <button class="mostrar" onclick="mostrar()">Mostrar</button>
+                </div>
+                <div class="controle-remover">
+                    <h3>Remover Conteúdo:</h3>
+                    <select name="escolha" id="escolha">
+                        <option value="inicio">inicio</option>
+                    </select>
+      <button class="remover" onclick="remover()">Remover</button>
+                </div>
+    </div>
+
+            <div class="fila-container">
+                <div class="fila-circulae" id="fila">
+                </div>
+            </div>
+  </div>
+    </section>
+
+    <script src=""></script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Intituto Federal de Educação, Ciência e Tecnologia Campus Barreiras</h4>
+                    <img src="logoifba.png" alt="Logotipo do IFBA">
+                </div>
+                <div class="footer-col">
+                    <h4>Duvido ou sugestão?</h34>
+                    <p>Envia um gmail para: <a href="mailto:20231910014@ifba.edu.br">20239190014@ifba.edu.br</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;Projeto registrado no Instituto Federal de Educação, Ciência e Tecnologia Campus Barreiras com direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
