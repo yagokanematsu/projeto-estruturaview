@@ -1,0 +1,134 @@
+/*Rotação da fila*/
+
+@keyframes girarFila{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(25deg);
+    }
+}
+
+.fila-animar{
+    animation: girarFila 0.45s ease-in-out;
+}
+
+/*No entrando na fila*/
+
+@keyframes entrando{
+    from{
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.no.entrou{
+    animation: entrando 0.35s ease-in-out;
+    background-color: #22c55e;
+}
+
+/*No saindo da fila*/
+
+@keyframes saindo{
+    from{
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.no.saiu{
+    animation: saindo 0.35s forwards;
+    background-color: #ef4444;
+}
+
+/*Cor para fila cheia*/
+
+@keyframes piscarvermelho{
+    0%{
+        background-color: #e6dbdb;
+    }
+    50%{
+        background-color: #fca5a5;
+    }
+    100%{
+        background-color: #e6dbdb;
+    }
+}
+
+.fila-cheia{
+    animation: piscarvermelho 0.6s;
+}
+
+/*Cor para fila vazia*/
+
+@keyframes piscarverde{
+    0%{
+        background-color: #e6dbdb;
+    }
+    50%{
+        background-color: #22c55e;
+    }
+    100%{
+        background-color: #e6dbdb;
+    }
+}
+
+.fila-vazia{
+    animation: piscarverde 0.6s;
+}
+
+/*Animação para os botoes*/
+
+button {
+  transition: transform 0.18s ease,
+              box-shadow 0.18s ease,
+              filter 0.18s ease;
+}
+
+/*Botao levanta*/
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.05);
+}
+
+/*Botao afunda*/
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+button.inserir:hover {
+  background-color: #3b6fe8;
+}
+
+button.remover:hover {
+  background-color: #dc2626;
+}
+
+button.mostrar:hover {
+  background-color: #16a34a;
+}
+
+button.criar:hover {
+  background-color: #1d4ed8;
+}
+
+.no {
+  transition: background-color 0.25s ease,
+              transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.fila-circular {
+  transition: transform 0.45s ease,
+              background-color 0.3s ease;
+}
