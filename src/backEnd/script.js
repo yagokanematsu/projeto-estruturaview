@@ -13,9 +13,23 @@ function iniciar_fila() {
     desenhar();
 }
 
+function reiniciar() {
+    fila = [];
+    tamanho = 0;
+    inicio = 0;
+    fim = 0;
+    qtd = 0;
+
+    desenhar();
+}
+
 function inserir() {
     if (qtd === tamanho) {
-        alert("A fila está cheia, não é possível adicionar mais valores.");
+        swal({
+            title: "ERRO!",
+            text: "A fila está cheia, não é possivel adicionar mais valores.",
+            icon: "error",
+        });
         return;
     }
 
@@ -27,7 +41,11 @@ function inserir() {
 
 function remover() {
     if (qtd === 0) {
-        alert("A fila está vazia, não é possível remover valores.");
+        swal({
+            title: "ERRO!",
+            text: "A fila está vazia, não é possivel remover valores.",
+            icon: "error",
+        });
         return;
     }
 
@@ -39,10 +57,14 @@ function remover() {
 
 function mostrar() {
     if(qtd == 0){
-    alert("A fila está vazia, não há início.");
+        swal({
+            title: "ERRO!",
+            text: "A fila está vazia, não há início.",
+            icon: "error",
+        });
     return; 
     } else {
-    alert("Início da fila: " + fila[inicio]);
+        swal("Início da fila: " + fila[inicio]);
     }
 }
 

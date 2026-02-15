@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fila Circular | Estrutura de Dados</title>
+    <link rel="stylesheet" href="explicacao.css">
+</head>
+<body>
+
+<header>
+    <h1>Fila Circular</h1>
+    <p>Eficiência e reaproveitamento de memória em um ciclo contínuo.</p>
+</header>
+
+<main class="container">
+    
+    <section class="intro">
+        <div class="card">
+            <h2>O que é?</h2>
+            <p>A <strong>Fila Circular</strong> é uma estrutura do tipo <strong>FIFO</strong> (First In, First Out). Diferente da fila comum, onde o espaço "atrás" de quem sai é desperdiçado, aqui o último elemento se conecta ao primeiro.</p>
+        </div>
+    </section>
+
+    <section class="visual-section">
+        <h2>Representação Visual</h2>
+        <div class="diagram-container">
+            
+            <p class="caption">Os ponteiros <em>Front</em> e <em>Rear</em> giram no vetor através da aritmética modular.</p>
+        </div>
+    </section>
+
+    <div class="grid">
+        <section class="card">
+            <h3>Por que usar?</h3>
+            <p>Em vetores comuns, o espaço vago no início nunca mais é usado. Na fila circular, usamos a fórmula <code>(index + 1) % tamanho</code> para garantir que o índice volte ao zero, otimizando o hardware.</p>
+        </section>
+
+        <section class="card">
+            <h3>Operações Básicas</h3>
+            <ul>
+                <li><strong>Enfileirar (Enqueue):</strong> O <em>Rear</em> avança circularmente e insere o dado.</li>
+                <li><strong>Desenfileirar (Dequeue):</strong> O <em>Front</em> avança, liberando o espaço anterior.</li>
+            </ul>
+        </section>
+    </div>
+
+    <section class="card highlight">
+        <h2>Aplicações Reais</h2>
+        <div class="tags">
+            <span>Buffers de Áudio/Vídeo</span>
+            <span>Sistemas de Log</span>
+            <span>Escalonamento de Processos</span>
+            <span>Roteadores de Rede</span>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Desenvolvido para fins didáticos &copy; 2026</p>
+</footer>
+
+</body>
+</html>

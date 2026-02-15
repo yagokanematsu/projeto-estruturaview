@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 *{ /*modificar tudo que tem no HTML*/
   margin: 0;
     padding: 0;
     box-sizing: border-box;/*Tamanho da caixa, oque o html vao ocupar*/
 }
 body{
-    font-family: Arial;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #333;
     padding-top: 80px;
@@ -69,44 +71,42 @@ select{
     cursor: pointer;
 }
 
+button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
 button.criar{
-  padding: 10px 15px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
   background: #2563eb;
   color: #fff;
 }
 
 button.inserir{
-    padding: 10px 15px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
     background: #5989f0;
-  color: #fff;
+    color: #fff;
 }
 
 button.mostrar{
-    padding: 10px 15px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
     background: rgb(129, 232, 129);
-  color: #fff;
+    color: #fff;
 }
 
 button.remover{
-    padding: 10px 15px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  font-weight: bold;
     background: rgb(226, 86, 86);
     color: #fff;
+}
+
+button.reiniciar{
+    background: #2563eb;
+    color: #fff;
+}
+
+button.explicacao{
+    background: #2563eb;
+    color: #fff;
+    padding: 10px 100px;
 }
 
 /*Principal Fila Circular*/
@@ -146,9 +146,9 @@ button.remover{
     color: white;
     border-radius: 50%;
     position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
 }
 
