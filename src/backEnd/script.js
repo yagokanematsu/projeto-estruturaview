@@ -24,7 +24,15 @@ function reiniciar() {
 }
 
 function inserir() {
-    if (qtd === tamanho) {
+    if (tamanho == 0) {
+        swal({
+            title: "ERRO!",
+            text: "A fila não tem tamanho definido, defina o tamanho dela.",
+            icon: "error",
+        });
+        return;
+    }
+    else if (qtd === tamanho) {
         swal({
             title: "ERRO!",
             text: "A fila está cheia, não é possivel adicionar mais valores.",
