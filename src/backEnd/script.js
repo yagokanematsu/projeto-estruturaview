@@ -27,7 +27,7 @@ function inserir() {
     if (tamanho == 0) {
         swal({
             title: "ERRO!",
-            text: "A fila não tem tamanho definido, defina o tamanho dela.",
+            text: "A fila não foi iniciada, inicie ela dando seu valor inicial.",
             icon: "error",
         });
         return;
@@ -64,15 +64,22 @@ function remover() {
 }
 
 function mostrar() {
-    if(qtd == 0){
+    if (qtd === 0) {
         swal({
             title: "ERRO!",
-            text: "A fila está vazia, não há início.",
+            text: "A fila está vazia.",
             icon: "error",
         });
-    return; 
-    } else {
+        return;
+    }
+
+    const escolha = document.getElementById("escolha_mostrar").value;
+
+    if (escolha === "inicio") {
         swal("Início da fila: " + fila[inicio]);
+    } else if (escolha === "fim") {
+        let posFim = (fim - 1 + tamanho) % tamanho;
+        swal("Fim da fila: " + fila[posFim]);
     }
 }
 
