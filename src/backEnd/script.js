@@ -78,8 +78,12 @@ function mostrar() {
     if (escolha === "inicio") {
         swal("Início da fila: " + fila[inicio]);
     } else if (escolha === "fim") {
+        if (qtd === tamanho){
+            swal("Início da fila: " + fila[inicio]);
+        } else {
         let posFim = (fim - 1 + tamanho) % tamanho;
         swal("Fim da fila: " + fila[posFim]);
+        }
     }
 }
 
