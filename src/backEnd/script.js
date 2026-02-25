@@ -6,6 +6,25 @@ let qtd = 0;
 
 function iniciar_fila() {
     tamanho = parseInt(document.getElementById("valor").value);
+
+    if (isNaN(tamanho) || tamanho <= 0) {
+        swal({
+            title: "ERRO!",
+            text: "Digite um número válido maior que zero",
+            icon: "error",
+        });
+        return;
+    }
+
+    if (tamanho > 16) {
+        swal({
+            title: "ERRO!",
+            text: "O tamanho máximo permitido é 16.",
+            icon: "error",
+        });
+        return;
+    }
+
     fila = new Array(tamanho);
     inicio = 0;
     fim = 0;
